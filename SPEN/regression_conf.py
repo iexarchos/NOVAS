@@ -1,0 +1,25 @@
+class config(object):
+	test = False 			 # boolean for test mode 
+	n_batch = 10             # batch size
+	n_update = 100000        # number of training steps
+	n_inner_update = 1       # updates per batch (keep at 1)
+	seed = 0
+	n_hidden = 128			 # nr of neurons in hidden layer
+	n_samples = 200			 # size of dataset to be generated
+	valid_frac = 0.25        # fraction of above dataset for validation
+	clip_norm = True	     
+	fixed_lr = False		
+	lr_start_value = 1e-3
+	use_gpu = True
+	gpu_no = 0
+	verbose = False
+	n_sample = 100			 # nr of samples for stoch search
+	n_iter = 10				 # nr of iterations for stoch search (inner loop)
+	alpha = 1.0  			 # NOVAS^2 learning rate
+	kappa = 10.0             # NOVAS^2 "temp", only for standard_exponential shape function
+	sigma = 10.0             # standard deviation for NOVAS^2 sampling
+	opt = 'min'              # whether the NOVAS^2 is a minimization ("min") or a maximization ("max")
+	shape_func = 'soft_ce'   # shape function. Use either "soft_ce" or "standard_exponential"
+	use_Hessian = False      # whether or not to use Hessian during NOVAS^2
+	load_filename = 'checkpoint'
+	pre_compute_init = True  # boolean to perform (n-1) iterations of NOVAS^2 off graph
